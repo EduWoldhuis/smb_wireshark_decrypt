@@ -24,7 +24,6 @@ parser = argparse.ArgumentParser(description="Calculate the Random Session Key b
 parser.add_argument("-i", "--input", required=False, help="Input PCAP or PCAPNG file")
 parser.add_argument("-x", required=False, help="If there are multiple different encrypted SMB conversations in one file, the selection.")
 parser.add_argument("--ntlm", required=False, help="The NTLM hash of the user.")
-# parser.add_argument("-m", "--md5", required=False, help="The MD5 hash of the user.")
 parser.add_argument("-u", "--user", required=False, help="User name")
 parser.add_argument("-d", "--domain", required=False, help="Domain name")
 parser.add_argument("-p", "--password", required=False, help="Password of User")
