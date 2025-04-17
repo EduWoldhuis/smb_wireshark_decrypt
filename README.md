@@ -2,9 +2,11 @@
 Note: the user password or NTLM hash is required for decryption.
 
 This script is modified from https://medium.com/maverislabs/decrypting-smb3-traffic-with-just-a-pcap-absolutely-maybe-712ed23ff6a2, to add a lot more functionality.
+
 requirements: Tshark, python3
 
 I created this script to solve https://tryhackme.com/room/blockroom.
+
 example commmand:
 ```
 ┌─[root@edu-virtualbox]─[/home/edu/THM/block]
