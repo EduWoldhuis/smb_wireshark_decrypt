@@ -1,7 +1,7 @@
 ### A python3 tool to get the necessary information to decrypt SMB3 from a PCAP file.
 Note: the user password or NTLM hash is required for decryption.
 
-This script is modified from https://medium.com/maverislabs/decrypting-smb3-traffic-with-just-a-pcap-absolutely-maybe-712ed23ff6a2, to add a lot more functionality.
+This script is modified from https://medium.com/maverislabs/decrypting-smb3-traffic-with-just-a-pcap-absolutely-maybe-712ed23ff6a2, with a lot more functionality added to handle the wireshark information for you.
 
 requirements: Tshark, python3
 
@@ -19,3 +19,10 @@ KeyExKey:  9754d7acae384644b196c05cda5315df
 Random SK: facfbdf010d00aa2574c7c41201099e8
 Session ID: 4500000000100000
 ```
+
+To decrypt the SMB conversation, go to Wireshark -> Edit -> Preferences -> Protocols -> SMB2 -> Secret session keys for decryption -> Edit.
+
+From there, add an entry using the "+" on the bottom left, and enter the Session ID into the Session ID box, the Random SK into the Session Key box, then click OK on both open windows.
+
+Now the SMB traffic should be decrypted, and files can be exported from File -> Export Objects -> SMB :)
+
